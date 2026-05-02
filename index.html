@@ -10,7 +10,6 @@
   <meta property="og:title" content="Cosmic Excuse Generator" />
   <meta property="og:description" content="Generate highly advanced explanations for extremely ordinary failures." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="./preview.png" />
 
   <title>Cosmic Excuse Generator</title>
   <link rel="stylesheet" href="style.css" />
@@ -26,11 +25,11 @@
       </p>
 
       <div class="controls" aria-label="Excuse category selector">
-        <button class="chip active" data-category="all">All</button>
-        <button class="chip" data-category="work">Work</button>
-        <button class="chip" data-category="school">School</button>
-        <button class="chip" data-category="trading">Trading</button>
-        <button class="chip" data-category="family">Family</button>
+        <button type="button" class="chip active" data-category="all" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-category="work" aria-pressed="false">Work</button>
+        <button type="button" class="chip" data-category="school" aria-pressed="false">School</button>
+        <button type="button" class="chip" data-category="trading" aria-pressed="false">Trading</button>
+        <button type="button" class="chip" data-category="family" aria-pressed="false">Family</button>
       </div>
 
       <article id="excuse" class="excuse-box" aria-live="polite">
@@ -38,9 +37,9 @@
       </article>
 
       <div class="button-row">
-        <button id="generateBtn" class="primary-btn">Generate Excuse</button>
-        <button id="copyBtn" class="secondary-btn">Copy</button>
-        <button id="shareBtn" class="secondary-btn">Share</button>
+        <button type="button" id="generateBtn" class="primary-btn">Generate Excuse</button>
+        <button type="button" id="copyBtn" class="secondary-btn">Copy</button>
+        <button type="button" id="shareBtn" class="secondary-btn">Share</button>
       </div>
 
       <p id="status" class="status" role="status"></p>

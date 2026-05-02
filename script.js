@@ -79,6 +79,25 @@ const categoryButtons = document.querySelectorAll(".chip");
 let activeCategory = "all";
 let lastExcuse = "";
 
+function fallbackCopyText(text) {
+  const area = document.createElement("textarea");
+  area.value = text;
+  area.setAttribute("readonly", "");
+  area.style.position = "absolute";
+  area.style.left = "-9999px";
+  document.body.appendChild(area);
+  area.select();
+
+  let copied = false;
+  try {
+    copied = document.execCommand("copy");
+  } finally {
+    document.body.removeChild(area);
+  }
+
+  return copied;
+}
+
 function setStatus(message) {
   statusBox.textContent = message;
   window.clearTimeout(setStatus.timeoutId);
@@ -110,7 +129,11 @@ async function copyExcuse() {
   const text = excuseBox.textContent.trim();
 
   try {
-    await navigator.clipboard.writeText(text);
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+    } else if (!fallbackCopyText(text)) {
+      throw new Error("Fallback copy failed");
+    }
     setStatus("Copied. Your alibi is now portable.");
   } catch (error) {
     setStatus("Copy failed. The clipboard entered deep space.");
@@ -137,8 +160,12 @@ async function shareExcuse() {
 
 categoryButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    categoryButtons.forEach((item) => item.classList.remove("active"));
+    categoryButtons.forEach((item) => {
+      item.classList.remove("active");
+      item.setAttribute("aria-pressed", "false");
+    });
     button.classList.add("active");
+    button.setAttribute("aria-pressed", "true");
     activeCategory = button.dataset.category;
     generateExcuse();
   });

@@ -21,13 +21,14 @@ Open `index.html` directly in your browser.
 ## File Structure
 
 ```text
-cosmic-excuse-generator/
+.
 ├── index.html
 ├── style.css
 ├── script.js
 ├── README.md
 ├── LICENSE
-└── .gitignore
+├── .gitignore
+└── cosmic-excuse-generator.zip
 ```
 
 ## Quick Start
@@ -35,8 +36,8 @@ cosmic-excuse-generator/
 Clone the repo:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/cosmic-excuse-generator.git
-cd cosmic-excuse-generator
+git clone https://github.com/StormDoragon/CosmicFun.git
+cd CosmicFun
 ```
 
 Run it locally by opening:
@@ -72,6 +73,12 @@ Your site will publish at:
 
 ```text
 https://YOUR-USERNAME.github.io/cosmic-excuse-generator/
+```
+
+If deploying from this repository name instead, the URL is:
+
+```text
+https://StormDoragon.github.io/CosmicFun/
 ```
 
 ## Deploy to Vercel
