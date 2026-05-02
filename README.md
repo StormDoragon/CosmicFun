@@ -1,24 +1,24 @@
 # Cosmic Excuse Generator
 
-A tiny, funny, space-themed web app that generates absurdly polished excuses for ordinary human failures.
+Cosmic Excuse Generator is a lightweight static web app that creates humorous, space-themed excuses for everyday situations.
 
-> “I’m not late. My timeline briefly merged with a slower universe.”
+## Highlights
 
-## Features
+- Single excuse generation with non-repeating logic
+- Batch generation of up to 100 unique excuses
+- Keyword-aware generation (homework, meeting, traffic, forgot, trading, late, family)
+- Copy and share actions
+- Favorites persisted in browser local storage
+- Responsive layout for desktop and mobile
+- Zero build step (pure HTML, CSS, and JavaScript)
 
-- Random cosmic excuse generator
-- Category filters: All, Work, School, Trading, Family
-- Copy-to-clipboard button
-- Native share button on supported devices
-- Responsive design for mobile, tablet, and desktop
-- No build tools required
-- Works on GitHub Pages, Vercel, Netlify, Cloudflare Pages, or any static host
+## Tech Stack
 
-## Demo
+- HTML5
+- CSS3
+- Vanilla JavaScript (ES6)
 
-Open `index.html` directly in your browser.
-
-## File Structure
+## Project Structure
 
 ```text
 .
@@ -31,80 +31,63 @@ Open `index.html` directly in your browser.
 └── cosmic-excuse-generator.zip
 ```
 
-## Quick Start
+## Getting Started
 
-Clone the repo:
+1. Clone the repository.
 
 ```bash
 git clone https://github.com/StormDoragon/CosmicFun.git
 cd CosmicFun
 ```
 
-Run it locally by opening:
-
-```text
-index.html
-```
-
-Or use a tiny local server:
+2. Run locally with a simple HTTP server.
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Then visit:
+3. Open the app.
 
 ```text
 http://localhost:8080
 ```
 
-## Deploy to GitHub Pages
+## Usage
 
-1. Create a new GitHub repository named `cosmic-excuse-generator`.
-2. Upload these files or push them with Git.
-3. Go to **Settings → Pages**.
-4. Under **Build and deployment**, choose:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/root`
-5. Save.
+1. Click Generate Excuse for a single output.
+2. Click Generate 100 for a large batch list.
+3. Enter context in the situation input to trigger keyword-specific styles.
+4. Save favorites to build a local quote library.
+5. Use Copy or Share to export the current excuse.
 
-Your site will publish at:
+## Deployment
 
-```text
-https://YOUR-USERNAME.github.io/cosmic-excuse-generator/
-```
+### GitHub Pages
 
-If deploying from this repository name instead, the URL is:
+1. Push your latest changes to the main branch.
+2. Open repository settings and go to Pages.
+3. Set Source to Deploy from a branch.
+4. Select main branch and root folder.
+5. Save and wait for deployment.
+
+For this repository, the expected Pages URL is:
 
 ```text
 https://StormDoragon.github.io/CosmicFun/
 ```
 
-## Deploy to Vercel
+### Vercel / Netlify / Cloudflare Pages
 
-1. Import the GitHub repo into Vercel.
-2. Framework preset: `Other`.
-3. Build command: leave empty.
-4. Output directory: leave empty.
-5. Deploy.
+- Framework preset: none or other
+- Build command: empty
+- Output directory: project root
 
-## Customization Ideas
+## Development Notes
 
-- Add more excuse categories, such as gym, dating, business, coding, or parenting.
-- Add a “dramatic mode” for extra ridiculous excuses.
-- Add a screenshot/export card feature for social posts.
-- Add affiliate links or ad blocks if using this as a traffic toy on a content website.
-- Add a daily excuse page for SEO.
-
-## SEO Page Title Ideas
-
-- Cosmic Excuse Generator
-- Funny Excuse Generator
-- Random Excuse Generator
-- AI-Style Excuse Generator
-- Space-Themed Funny Excuses
+- The app is static, so no package manager is required.
+- Favorites are stored per browser in local storage and are not synced across devices.
+- Batch output and favorites are intentionally scrollable for large lists.
 
 ## License
 
-MIT License. Use it, remix it, launch it into orbit.
+MIT. See LICENSE for details.

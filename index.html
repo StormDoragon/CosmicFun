@@ -24,6 +24,22 @@
         Generate suspiciously polished explanations for ordinary human failures.
       </p>
 
+      <div class="advanced-controls" aria-label="Advanced generator controls">
+        <label class="field" for="toneSelect">
+          <span>Tone</span>
+          <select id="toneSelect">
+            <option value="classic">Classic Cosmic</option>
+            <option value="professional">Professional Spin</option>
+            <option value="dramatic">Overdramatic</option>
+            <option value="chaotic">Chaotic Goblin</option>
+          </select>
+        </label>
+        <label class="field" for="situationInput">
+          <span>Situation (optional)</span>
+          <input id="situationInput" type="text" maxlength="80" placeholder="e.g. missed standup, late homework, forgot dishes" />
+        </label>
+      </div>
+
       <div class="controls" aria-label="Excuse category selector">
         <button type="button" class="chip active" data-category="all" aria-pressed="true">All</button>
         <button type="button" class="chip" data-category="work" aria-pressed="false">Work</button>
@@ -38,9 +54,21 @@
 
       <div class="button-row">
         <button type="button" id="generateBtn" class="primary-btn">Generate Excuse</button>
+        <button type="button" id="generateThreeBtn" class="secondary-btn">Generate 100</button>
+        <button type="button" id="saveBtn" class="secondary-btn">Save Favorite</button>
         <button type="button" id="copyBtn" class="secondary-btn">Copy</button>
         <button type="button" id="shareBtn" class="secondary-btn">Share</button>
       </div>
+
+      <section class="output-stack" aria-label="Generated excuse list">
+        <h2 class="output-title">Batch Output</h2>
+        <ul id="batchList" class="batch-list"></ul>
+      </section>
+
+      <section class="output-stack" aria-label="Recently saved excuses">
+        <h2 class="output-title">Favorites</h2>
+        <ul id="favoritesList" class="batch-list"></ul>
+      </section>
 
       <p id="status" class="status" role="status"></p>
     </section>
