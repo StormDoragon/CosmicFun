@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A funny space-themed excuse generator that creates absurd cosmic excuses for everyday situations." />
+  <meta name="keywords" content="cosmic excuse generator, funny excuse generator, space humor, random excuses, web app" />
+  <meta name="author" content="Cosmic Excuse Generator" />
+
+  <meta property="og:title" content="Cosmic Excuse Generator" />
+  <meta property="og:description" content="Generate highly advanced explanations for extremely ordinary failures." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./preview.png" />
+
+  <title>Cosmic Excuse Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero-card" aria-labelledby="app-title">
+      <div class="badge">Orbitally Unnecessary Tool #001</div>
+
+      <h1 id="app-title">Cosmic Excuse Generator</h1>
+      <p class="subtitle">
+        Generate suspiciously polished explanations for ordinary human failures.
+      </p>
+
+      <div class="controls" aria-label="Excuse category selector">
+        <button class="chip active" data-category="all">All</button>
+        <button class="chip" data-category="work">Work</button>
+        <button class="chip" data-category="school">School</button>
+        <button class="chip" data-category="trading">Trading</button>
+        <button class="chip" data-category="family">Family</button>
+      </div>
+
+      <article id="excuse" class="excuse-box" aria-live="polite">
+        Click generate. The universe is warming up its alibi engine.
+      </article>
+
+      <div class="button-row">
+        <button id="generateBtn" class="primary-btn">Generate Excuse</button>
+        <button id="copyBtn" class="secondary-btn">Copy</button>
+        <button id="shareBtn" class="secondary-btn">Share</button>
+      </div>
+
+      <p id="status" class="status" role="status"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
